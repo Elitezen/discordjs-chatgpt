@@ -42,8 +42,7 @@ class ChatGPTClient {
     try {
       if (!this.apiClient) throw new TypeError("ChatGPT client failed to initialize");
       const response = await this.apiClient.sendMessage(message, { 
-        parentMessageId:id,
-        onProgress: (partialResponse) => console.log(partialResponse.text) 
+        parentMessageId:id
       });
       return response;
     } catch (err) {

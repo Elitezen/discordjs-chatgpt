@@ -1,5 +1,7 @@
 # discordjs-chatgpt
 
+![screenshot](https://i.imgur.com/Ye0BWpW.png)
+
 A small module for quick implemntation of OpenAI's Chat-GPT into Discord.JS. This is the first public version of the library. For bug reports or feature requests visit https://github.com/Elitezen/discordjs-chatgpt
 
 This module requires an OpenAI API key. You can get one [here](https://platform.openai.com/account/api-keys)

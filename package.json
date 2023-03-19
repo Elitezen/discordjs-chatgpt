@@ -2,7 +2,7 @@
   "name": "discordjs-chatgpt",
   "type": "commonjs",
   "version": "0.1.0",
-  "description": "",
+  "description": "A small module for quick implemntation of OpenAI's Chat-GPT into Discord.JS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +20,6 @@
   "dependencies": {
     "chatgpt": "^5.1.2",
     "discord.js": "^14.8.0"
-  }
+  },
+  "keywords": ["chatgpt","chat-gpt", "openai", "ai", "discord.js", "discord", "discord bots"]
 }
