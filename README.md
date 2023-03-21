@@ -7,6 +7,12 @@ A small module for quick implemntation of OpenAI's Chat-GPT into Discord.JS. Thi
 This module requires an OpenAI API key. You can get one [here](https://platform.openai.com/account/api-keys)
 
 ---
+# Updates
+## 0.2.0
+
+Added `ChatGPTClient.forgetContext()`
+
+---
 
 **Installing**
 

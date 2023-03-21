@@ -51,6 +51,14 @@ class ChatGPTClient {
   }
 
   /**
+   * Deletes an existing conversation.
+   * @param {string} userId The ID of the Discord user.
+   */
+  forgetContext(userId) {
+    if (this.options.contextRemembering) this.contextData.delete(userId);
+  }
+
+  /**
    * Send a message to chat through a `Message`.
    * @param {Message} message The message object.
    * @param {string} str The content to send the API.
