@@ -10,14 +10,15 @@ class ChatGPTClient {
 
   /**
    * @param {string} openAIAPIKey Your OpenAI API Key.
-   * @param {{contextRemembering: boolean, responseType: 'embed' | 'string'}} options `.contextRemembering` Whether to keep track of ongoing conversations for each user.
+   * @param {{contextRemembering:boolean, responseType: 'embed' | 'string', maxLength:number}} options `.contextRemembering` Whether to keep track of ongoing conversations for each user.
    */
   constructor(openAIAPIKey, options) {
     if (!openAIAPIKey) throw new TypeError("An OpenAI API key must be provided. Create an OpenAI account and get an API key at https://platform.openai.com/account/api-keys");
 
     const optionDefaults = {
       contextRemembering: true,
-      responseType: 'embed'
+      responseType: 'embed',
+      maxLength: 2000
     };
 
     this.options = Object.assign(optionDefaults, options);
@@ -113,7 +114,7 @@ class ChatGPTClient {
         .setColor(Colors.DarkerGrey)
         .addFields(
           { name: 'Input', value: str },
-          { name: 'Response', value: reply.text }
+          { name: 'Response', value: reply.text.length > 1024 ? reply.text.slice(0, 1021) + '...' : reply.text}
         )
         .setAuthor({
           iconURL: 'https://seeklogo.com/images/O/open-ai-logo-8B9BFEDC26-seeklogo.com.png',

@@ -8,9 +8,9 @@ This module requires an OpenAI API key. You can get one [here](https://platform.
 
 ---
 # Updates
-## 0.2.0
 
-Added `ChatGPTClient.forgetContext()`
+# 0.2.1
+Added gaurd to text length in embeds
 
 ---
 
